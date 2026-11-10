@@ -1,6 +1,6 @@
 # SpendWise
 
-SpendWise is a responsive personal-finance web app built with HTML, CSS, vanilla JavaScript, PHP, and MySQL. The original C# desktop project remains in `SpendWise/`; the web app lives at the repository root.
+SpendWise is a responsive personal-finance web app built with HTML, CSS, vanilla JavaScript, PHP, and MySQL.
 
 ## Features
 
@@ -23,9 +23,5 @@ SpendWise is a responsive personal-finance web app built with HTML, CSS, vanilla
 5. Open `http://localhost/SpendWise/`.
 
 The default XAMPP MySQL connection is `127.0.0.1:3306`, database `spendwise`, user `root`, and an empty password. The dashboard displays a connection/setup message if the API cannot reach MySQL.
-
-## Data notes
-
-The included `SpendWise/SpendWise.db` belongs to the legacy desktop app and is not modified by the web app. After importing `schema.sql`, run `php migrate-legacy.php` from the project folder to optionally copy the existing wallet, transactions, and investments into an empty MySQL ledger. The migration asks for confirmation, refuses to run over existing MySQL transactions or investments, and leaves the SQLite file unchanged. A migrated wallet balance is retained as its opening balance.
 
 This version is designed for a single local user and does not include sign-in or multi-user access controls. Do not expose it directly to the public internet without adding authentication, authorization, HTTPS, and deployment-specific database credentials.
